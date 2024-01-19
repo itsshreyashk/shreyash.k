@@ -2,11 +2,17 @@ import React from 'react'
 
 
 import Dev from "./pages/dev";
+import Home from './pages/home';
 
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 const App : React.FC = () => {
   return (
     <>
-      <Dev />
+    <BrowserRouter>
+    <Routes>
+      <Route path='/' element={<Home />}></Route>
+    </Routes>
+    </BrowserRouter>
     </>
   )
 }
