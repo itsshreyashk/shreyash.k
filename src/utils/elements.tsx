@@ -1,9 +1,9 @@
-import React, { useEffect, useRef, useState } from "react";
+import React, { useRef, useState } from "react";
 
 const PlaceOrderButton: React.FC = () => {
 
     const handleOpen = () => {
-        const resizableDiv : any = document.getElementById('resizable');
+        const resizableDiv: any = document.getElementById('resizable');
         if (resizableDiv) {
             resizableDiv.style.display = 'block'; // or any other suitable value, like 'flex' or 'grid'
         }
@@ -18,8 +18,8 @@ const PlaceOrderButton: React.FC = () => {
 
 const Impress: React.FC = () => {
     return (<>
-        <div className="text-center px-7 py-[30vh] border-b border-gray-300">
-            <span className="font-bold text-4xl" id="pro-1">
+        <div className="text-center px-7 py-[30vh] bg-gray-900 border-b border-gray-300">
+            <span className="font-bold text-4xl text-white" id="pro-1">
                 Order Websites Like never Before.
             </span>
         </div>
@@ -44,6 +44,20 @@ const TrackOrder: React.FC = () => {
         {
             "title": "Submit the Form.",
             "description": "Submit the form so that we can get what you want."
+        },
+        {
+            "title": "Wait for confirmation.",
+            "description": "Once your order has been confirmed, you move on."
+
+        },
+        {
+            "title": "Oversee Development.",
+            "description": "Get to see the progress of your purchase in real-time so that it touches where you want it to be."
+
+        },
+        {
+            "title": "Get your Product.",
+            "description": "Submit the form so that we can get what you want."
         }
     ]);
     const closeTrack = useRef<HTMLDivElement>(null);
@@ -55,17 +69,14 @@ const TrackOrder: React.FC = () => {
         }
     };
 
-    useEffect(() => {
-      handleClose();
-      return () => {
-      }
-    }, [handleClose])
-    
     return (
         <div className="w-screen fixed bottom-0 flex justify-center bg-[transparent] z-[5]">
-            <div id="resizable" className=" animation_01 px-4 max-w-[500px] resize-y py-2 rounded-t-xl bg-[transparent] backdrop-blur-xl shadow-xl border border-gray-200 w-full h-[max-content]">
-                <div className="w-full flex justify-center pb-2">
-                    <div className="w-10 py-1 rounded-full bg-gray-600 cursor-pointer" onClick={handleClose} ref={closeTrack}></div>
+            <div id="resizable" className=" animation_01 px-4 max-w-[500px] resize-y py-2 rounded-t-2xl bg-[transparent] backdrop-blur-xl shadow-xl border border-gray-500 w-full h-[max-content] hidden">
+                <div className="w-full flex justify-end pb-2 space-x-1">
+                    <div className="p-2 w-1 rounded-full bg-green-600 cursor-pointer" onClick={handleClose} ref={closeTrack}></div>
+                    <div className="p-2 w-1 rounded-full bg-yellow-600 cursor-pointer" onClick={handleClose} ref={closeTrack}></div>
+                    <div className="p-2 w-1 rounded-full bg-red-600 cursor-pointer" onClick={handleClose} ref={closeTrack}></div>
+
                 </div>
                 <div className="w-full rounded-xl border border-gray-700 overflow-hidden">
                     {trackStatus.map((element: any, index: number) => (
