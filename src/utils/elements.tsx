@@ -1,8 +1,16 @@
-import React, { useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 
 const PlaceOrderButton: React.FC = () => {
+
+    const handleOpen = () => {
+        const resizableDiv : any = document.getElementById('resizable');
+        if (resizableDiv) {
+            resizableDiv.style.display = 'block'; // or any other suitable value, like 'flex' or 'grid'
+        }
+    };
+
     return (
-        <button className="px-3 py-1 bg-blue-500 rounded-full top-4 fixed right-4 text-white text-sm hover:bg-blue-600">
+        <button type="button" className="px-3 py-1 bg-blue-500 rounded-full top-4 fixed right-4 text-white text-sm hover:bg-blue-600" onClick={handleOpen}>
             Place Order
         </button>
     );
@@ -38,11 +46,26 @@ const TrackOrder: React.FC = () => {
             "description": "Submit the form so that we can get what you want."
         }
     ]);
+    const closeTrack = useRef<HTMLDivElement>(null);
+
+    const handleClose = () => {
+        const resizableDiv = document.getElementById('resizable');
+        if (resizableDiv) {
+            resizableDiv.style.display = 'none';
+        }
+    };
+
+    useEffect(() => {
+      handleClose();
+      return () => {
+      }
+    }, [handleClose])
+    
     return (
         <div className="w-screen fixed bottom-0 flex justify-center bg-[transparent] z-[5]">
-            <div className=" animation_01 px-4 max-w-[500px] resize-y py-2 rounded-t-xl bg-[transparent] backdrop-blur-xl shadow-xl border border-gray-200 w-full h-[max-content]">
+            <div id="resizable" className=" animation_01 px-4 max-w-[500px] resize-y py-2 rounded-t-xl bg-[transparent] backdrop-blur-xl shadow-xl border border-gray-200 w-full h-[max-content]">
                 <div className="w-full flex justify-center pb-2">
-                    <div className="w-10 py-1 rounded-full bg-gray-600"></div>
+                    <div className="w-10 py-1 rounded-full bg-gray-600 cursor-pointer" onClick={handleClose} ref={closeTrack}></div>
                 </div>
                 <div className="w-full rounded-xl border border-gray-700 overflow-hidden">
                     {trackStatus.map((element: any, index: number) => (
