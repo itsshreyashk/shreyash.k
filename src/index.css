@@ -3,3 +3,16 @@
 #pro-1 {
     font-family: 'Rubik', sans-serif;
 }
+.animation_01 {
+    animation: animation_01 1s;
+}
+
+@keyframes animation_01 {
+    0% {
+        height: 4px;
+    } 50% {
+        height: 90%;
+    } 100% {
+        height: max-content;
+    }
+}
