@@ -1,7 +1,7 @@
 import React from 'react'
 
 
-import Dev from "./pages/dev";
+// import Dev from "./pages/dev";
 import Home from './pages/home';
 import Order from './pages/order';
 
