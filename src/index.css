@@ -3,16 +3,52 @@
 #pro-1 {
     font-family: 'Rubik', sans-serif;
 }
-.animation_01 {
-    animation: animation_01 1s;
-}
 
+.animation_01 {
+    animation: animation_01 0.2s;
+}
 @keyframes animation_01 {
     0% {
-        height: 4px;
-    } 50% {
-        height: 90%;
+        transform: scale(2);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+@keyframes close-anim {
+    0% {
+        transform: scale(1);
+    }
+    100% {
+        transform: scale(0);
+    }
+}
+/* Thin and Rounded Scrollbar Styles */
+::-webkit-scrollbar {
+    width: 8px;
+    /* adjust as needed for thickness */
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: gray;
+    /* choose your color */
+    border-radius: 10px;
+    /* make it rounded */
+}
+
+::-webkit-scrollbar-track {
+    background-color: #f1f1f1;
+    /* track color, tweak if you like */
+}
+
+.anim-45 {
+    animation: anim45 1s;
+}
+
+@keyframes anim45 {
+    0% {
+        backdrop-filter: blur(40px);
     } 100% {
-        height: max-content;
+        backdrop-filter: blur(0px);
     }
 }

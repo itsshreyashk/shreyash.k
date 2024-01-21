@@ -1,4 +1,4 @@
-import React, { useRef, useState } from "react";
+import React, { useRef, useState, useEffect } from "react";
 
 const PlaceOrderButton: React.FC = () => {
 
@@ -16,9 +16,10 @@ const PlaceOrderButton: React.FC = () => {
     );
 }
 
+//Main code to display here...
 const Impress: React.FC = () => {
     return (<>
-        <div className="text-center px-7 py-[30vh] bg-gray-900 border-b border-gray-300">
+        <div className="text-center px-7 py-[30vh] bg-black border-b border-gray-300">
             <span className="font-bold text-4xl text-white" id="pro-1">
                 Order Websites Like never Before.
             </span>
@@ -64,14 +65,16 @@ const TrackOrder: React.FC = () => {
 
     const handleClose = () => {
         const resizableDiv = document.getElementById('resizable');
-        if (resizableDiv) {
+        const removable = document.getElementById('removable');
+        if (resizableDiv && removable) {
             resizableDiv.style.display = 'none';
+            removable.style.display = 'none';
         }
     };
 
     return (
-        <div className="w-screen fixed bottom-0 flex justify-center bg-[transparent] z-[5]">
-            <div id="resizable" className=" animation_01 px-4 max-w-[500px] resize-y py-2 rounded-t-2xl bg-[transparent] backdrop-blur-xl shadow-xl border border-gray-500 w-full h-[max-content] hidden">
+        <div id="removable" className="w-screen fixed bottom-0 pb-20 p-2 flex justify-center bg-[transparent] z-[5]">
+            <div id="resizable" className=" animation_01 px-4 max-w-[500px] resize-y py-2 rounded-2xl bg-[transparent] backdrop-blur-xl shadow-xl border border-gray-500 w-full h-[max-content] hidden">
                 <div className="w-full flex justify-end pb-2 space-x-1">
                     <div className="p-2 w-1 rounded-full bg-green-600 cursor-pointer" onClick={handleClose} ref={closeTrack}></div>
                     <div className="p-2 w-1 rounded-full bg-yellow-600 cursor-pointer" onClick={handleClose} ref={closeTrack}></div>
@@ -91,4 +94,29 @@ const TrackOrder: React.FC = () => {
         </div>
     );
 }
-export { PlaceOrderButton, Impress, TrackOrder };
+const Intro: React.FC = () => {
+    const makeInit = useRef<HTMLDivElement>(null);
+
+    useEffect(() => {
+        const timeoutId = setTimeout(() => {
+            if (makeInit.current) {
+                makeInit.current.style.display = "none";
+            }
+        }, 1000);
+
+        return () => {
+            clearTimeout(timeoutId);
+        };
+    }, []);
+
+    return (
+        <>
+            <div ref={makeInit} className="flex items-center justify-center h-screen fixed top-0 bg-transparent w-screen z-[7] anim-45">
+                {/* Add your content here */}
+            </div>
+        </>
+    );
+}
+
+
+export { PlaceOrderButton, Impress, TrackOrder, Intro };
