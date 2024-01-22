@@ -1,5 +1,5 @@
 import React, { useRef, useState, useEffect } from "react";
-
+// import { Link } from "react-router-dom";
 const PlaceOrderButton: React.FC = () => {
 
     const handleOpen = () => {
@@ -73,8 +73,8 @@ const TrackOrder: React.FC = () => {
     };
 
     return (
-        <div id="removable" className="w-screen fixed bottom-0 pb-20 p-2 flex justify-center bg-[transparent] z-[5]">
-            <div id="resizable" className=" animation_01 px-4 max-w-[500px] resize-y py-2 rounded-2xl bg-[transparent] backdrop-blur-xl shadow-xl border border-gray-500 w-full h-[max-content] hidden">
+        <div id="removable" className="w-screen fixed bottom-0 pb-20 p-2 flex justify-center bg-[transparent] z-[5]" style={{ pointerEvents: 'none' }}>
+            <div id="resizable" className=" animation_01 px-4 max-w-[500px] resize-y py-2 rounded-2xl bg-[transparent] backdrop-blur-xl shadow-xl border border-gray-500 w-full h-[max-content] hidden" style={{ pointerEvents: 'auto' }}>
                 <div className="w-full flex justify-end pb-2 space-x-1">
                     <div className="p-2 w-1 rounded-full bg-green-600 cursor-pointer" onClick={handleClose} ref={closeTrack}></div>
                     <div className="p-2 w-1 rounded-full bg-yellow-600 cursor-pointer" onClick={handleClose} ref={closeTrack}></div>
@@ -118,5 +118,23 @@ const Intro: React.FC = () => {
     );
 }
 
+interface ShowInfoProps {
+    inputValue: string;
+}
 
-export { PlaceOrderButton, Impress, TrackOrder, Intro };
+
+
+const ShowInfo: React.FC<ShowInfoProps> = ({ inputValue }) => {
+    return (
+        <div
+            id="info"
+            className="max-w-[40vw] w-[max-content] min-w-[190px] bg-blue-600 h-[max-content] fixed top-2 left-2 px-4 py-2 rounded-2xl rounded-tl-sm"
+        >
+            <span className="text-white text-sm">
+                {inputValue}
+            </span>
+        </div>
+    );
+};
+
+export { PlaceOrderButton, Impress, TrackOrder, Intro, ShowInfo };
