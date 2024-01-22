@@ -34,6 +34,9 @@ const Impress: React.FC = () => {
             <TechStackTable />
         </div>
         <Pricing />
+        <div className="pt-[500px] pb-[80px] text-center">
+            <span id="pro-3" className="text-7xl tracking-tight">Now or <span className="text-red-600">Never.</span> </span>
+        </div>
     </>);
 }
 
@@ -297,10 +300,99 @@ const Pricing: React.FC = () => {
     return (<>
         <div className="py-8 px-2 text-center">
             <h1 id="pro-2" className="text-4xl">Pricing</h1>
-
+            <PricingTable />
+            <div className="py-2">
+                <span className="text-gray-500 text-sm">*Disclaimer : The pricing above does not include GST charges. The charges above are not negotiable. </span>
+            </div>
         </div>
     </>)
 }
+
+
+const PricingTable: React.FC = () => {
+    return (<>
+        <div className="w-full mx-auto my-8 bg-white shadow-md overflow-scroll no_scrollbar rounded-lg">
+
+            <table className="min-w-full divide-y divide-gray-100 mt-6">
+                <thead className="bg-gray-50">
+                    <tr>
+                        <th scope="col" className="px-6 py-3 text-left text-xs font-semibold text-gray-700 uppercase tracking-wider">
+                            Task
+                        </th>
+                        <th scope="col" className="px-6 py-3 text-left text-xs font-semibold text-gray-700 uppercase tracking-wider">
+                            Pricing
+                        </th>
+                    </tr>
+                </thead>
+                <tbody className="bg-white divide-y divide-gray-100">
+
+                    <tr>
+                        <td className="px-6 py-4 whitespace-nowrap">
+                            <div className="text-sm font-medium text-gray-800">
+                                Deployment
+                            </div>
+                        </td>
+                        <td className="px-6 py-4 whitespace-nowrap">
+                            <div className="text-sm font-medium text-blue-500">
+                                $10 to $20 + Cloud Charges
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td className="px-6 py-4 whitespace-nowrap">
+                            <div className="text-sm font-medium text-gray-800">
+                                Bug Fixing
+                            </div>
+                        </td>
+                        <td className="px-6 py-4 whitespace-nowrap">
+                            <div className="text-sm font-medium text-blue-500">
+                                $12 to $30
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td className="px-6 py-4 whitespace-nowrap">
+                            <div className="text-sm font-medium text-gray-800">
+                                Building
+                            </div>
+                        </td>
+                        <td className="px-6 py-4 whitespace-nowrap">
+                            <div className="text-sm font-medium text-blue-500">
+                                $20 per day.
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td className="px-6 py-4 whitespace-nowrap">
+                            <div className="text-sm font-medium text-gray-800">
+                                Kickoff fee
+                            </div>
+                        </td>
+                        <td className="px-6 py-4 whitespace-nowrap">
+                            <div className="text-sm font-medium text-blue-500">
+                                20% to 30% of overall cost <abbr title="Not including the cost of Deployment providers." className="text-black">info.</abbr>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td className="px-6 py-4 whitespace-nowrap">
+                            <div className="text-sm font-medium text-gray-800">
+                                Suggestions
+                            </div>
+                        </td>
+                        <td className="px-6 py-4 whitespace-nowrap">
+                            <div className="text-sm font-medium text-blue-500">
+                                Free to $5
+                            </div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </>)
+}
+
+
 const Cookies: React.FC = () => {
     return (
         <>
