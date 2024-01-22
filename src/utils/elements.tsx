@@ -22,7 +22,7 @@ const PlaceOrderButton: React.FC = () => {
 const Impress: React.FC = () => {
     return (<>
         <div className="text-center px-4 py-[200px] bg-black border-b border-gray-300">
-            <span className="font-bold text-7xl text-white text-anim" id="pro-1">
+            <span className="font-bold text-7xl text-white text-anim" id="pro-2">
                 Order Websites Like never Before.
             </span>
         </div>
@@ -33,6 +33,7 @@ const Impress: React.FC = () => {
             <span id="pro-2" className="text-3xl">Stack that defines.</span>
             <TechStackTable />
         </div>
+        <Pricing />
     </>);
 }
 
@@ -137,7 +138,7 @@ const ShowInfo: React.FC<ShowInfoProps> = ({ inputValue }) => {
     return (
         <div
             id="info"
-            className="max-w-[40vw] w-[max-content] min-w-[190px] bg-blue-600 h-[max-content] fixed top-2 left-2 px-4 py-2 rounded-2xl rounded-tl-sm"
+            className="max-w-[40vw] w-[max-content] min-w-[190px] bg-blue-600 h-[max-content] fixed top-1 left-1 px-4 py-2 rounded-2xl rounded-tl-sm"
         >
             <span className="text-white text-sm">
                 {inputValue}
@@ -148,7 +149,7 @@ const ShowInfo: React.FC<ShowInfoProps> = ({ inputValue }) => {
 //Tech stack
 const TechStackTable: React.FC = () => {
     return (
-        <div className="w-full mx-auto my-8 bg-white shadow-md overflow-hidden rounded-lg">
+        <div className="w-full mx-auto my-8 bg-white shadow-md overflow-scroll no_scrollbar rounded-lg">
             <table className="min-w-full divide-y divide-gray-100">
                 <thead className="bg-gray-50">
                     <tr>
@@ -240,6 +241,51 @@ const TechStackTable: React.FC = () => {
                             <div className="text-sm text-gray-800">Linode servers good for scalable apps.</div>
                         </td>
                     </tr>
+                    <tr>
+                        <td className="px-6 py-4 whitespace-nowrap">
+                            <div className="text-sm font-medium text-gray-800">
+                                CMS
+                            </div>
+                        </td>
+                        <td className="px-6 py-4 whitespace-nowrap">
+                            <div className="text-sm font-medium text-blue-500">
+                                Strapi
+                            </div>
+                        </td>
+                        <td className="px-6 py-4 whitespace-nowrap">
+                            <div className="text-sm text-gray-800">Strapi is a good open-source CMS provider.</div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td className="px-6 py-4 whitespace-nowrap">
+                            <div className="text-sm font-medium text-gray-800">
+                                Containerization
+                            </div>
+                        </td>
+                        <td className="px-6 py-4 whitespace-nowrap">
+                            <div className="text-sm font-medium text-blue-500">
+                                Docker
+                            </div>
+                        </td>
+                        <td className="px-6 py-4 whitespace-nowrap">
+                            <div className="text-sm text-gray-800">Docker Provides easy containerization.</div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td className="px-6 py-4 whitespace-nowrap">
+                            <div className="text-sm font-medium text-gray-800">
+                                Real-time <abbr title="communication">comm.</abbr>
+                            </div>
+                        </td>
+                        <td className="px-6 py-4 whitespace-nowrap">
+                            <div className="text-sm font-medium text-blue-500">
+                                Docker
+                            </div>
+                        </td>
+                        <td className="px-6 py-4 whitespace-nowrap">
+                            <div className="text-sm text-gray-800">Docker Provides easy containerization.</div>
+                        </td>
+                    </tr>
                 </tbody>
             </table>
         </div>
@@ -247,4 +293,19 @@ const TechStackTable: React.FC = () => {
 }
 
 
-export { PlaceOrderButton, Impress, TrackOrder, Intro, ShowInfo };
+const Pricing: React.FC = () => {
+    return (<>
+        <div className="py-8 px-2 text-center">
+            <h1 id="pro-2" className="text-4xl">Pricing</h1>
+
+        </div>
+    </>)
+}
+const Cookies: React.FC = () => {
+    return (
+        <>
+        </>
+    );
+};
+
+export { PlaceOrderButton, Impress, TrackOrder, Intro, ShowInfo, Cookies };

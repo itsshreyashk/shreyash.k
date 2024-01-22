@@ -12,6 +12,11 @@
     font-family: 'Playfair Display', serif;
 }
 
+#pro-2::selection {
+    background-color: black;
+    color: white;
+}
+
 .animation_01 {
     animation: animation_01 0.2s;
 }
@@ -122,4 +127,8 @@
     100% {
         font-family: 'Rubik', sans-serif;
     }
+}
+
+.no_scrollbar::-webkit-scrollbar {
+    display: none;
 }
