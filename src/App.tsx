@@ -7,12 +7,16 @@ import Order from './pages/order';
 import { Intro, ShowInfo } from './utils/elements';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 const App: React.FC = () => {
-  const [showDelayedInfo, setShowDelayedInfo] = useState(false);
+  const [showDelayedInfoX, setShowDelayedInfoX] = useState(false);
+  const [showDelayedInfoY, setShowDelayedInfoY] = useState(false);
   useEffect(() => {
 
     return () => {
       setTimeout(() => {
-        setShowDelayedInfo(true);
+        setShowDelayedInfoX(true);
+        setTimeout(() => {
+          setShowDelayedInfoY(true)
+        }, 15000);
       }, 2000);
     }
   }, [])
@@ -21,7 +25,8 @@ const App: React.FC = () => {
     <>
       <Intro />
       <ShowInfo inputValue='Welcome' />
-      {showDelayedInfo && <ShowInfo inputValue="Explore awesome Games in the Games Tab." />}
+      {showDelayedInfoX && <ShowInfo inputValue="Explore awesome Games in the Games Tab." />}
+      {showDelayedInfoY && <ShowInfo inputValue="Use Keyboard shortcuts to navigate faster within pages." />}
       <BrowserRouter>
         <Routes>
           <Route path='/' element={<Home />}></Route>

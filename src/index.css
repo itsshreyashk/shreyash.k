@@ -1,7 +1,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Rubik:wght@800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;1,900&family=Raleway:wght@600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@500&display=swap');
 
 #pro-1 {
     font-family: 'Rubik', sans-serif;
+}
+
+#pro-2 {
+    font-family: 'Playfair Display', serif;
 }
 
 .animation_01 {
@@ -92,4 +100,26 @@
 
 #info {
     animation: fadeInScale 0.5s ease-out, fadeOutScale 0.5s ease-in 2s forwards;
+}
+
+
+
+.text-anim {
+    animation: textAnimation 0.5s;
+}
+
+@keyframes textAnimation {
+    0% {
+        font-family: 'Lato', sans-serif;
+    }
+
+    25% {
+        font-family: 'Raleway', sans-serif;
+    }
+    80% {
+        font-family: 'Ubuntu', sans-serif;
+    }
+    100% {
+        font-family: 'Rubik', sans-serif;
+    }
 }
