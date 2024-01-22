@@ -2,7 +2,7 @@
 {
   "title": "Awesome Personal Website",
   "description": "🚀 Welcome to the repository for my incredible personal website!",
-  "author": "GeniusDev21",
+  "author": "itsshreyashk",
   "languages": ["Typescript", "Tailwind CSS", "Firebase"],
   "frameworks": ["React"],
   "features": [
