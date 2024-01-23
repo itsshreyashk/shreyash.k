@@ -6,6 +6,7 @@ import Home from './pages/home';
 import Order from './pages/order';
 import { Intro, ShowInfo, Cookies } from './utils/elements';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import Form from './pages/form';
 const App: React.FC = () => {
   const [showDelayedInfoX, setShowDelayedInfoX] = useState(false);
   const [showDelayedInfoY, setShowDelayedInfoY] = useState(false);
@@ -37,6 +38,7 @@ const App: React.FC = () => {
         <Routes>
           <Route path='/' element={<Home />}></Route>
           <Route path='/order' element={<Order />}></Route>
+          <Route path='/fill_form' element={<Form />}></Route>
         </Routes>
       </BrowserRouter>
     </>

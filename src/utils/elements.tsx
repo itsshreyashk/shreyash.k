@@ -1,4 +1,5 @@
 import React, { useRef, useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 // import { Link } from "react-router-dom";
 const PlaceOrderButton: React.FC = () => {
 
@@ -43,7 +44,9 @@ const Impress: React.FC = () => {
 const PlaceOrder: React.FC = () => {
     return (<>
         <div className="w-full py-4 space-y-1">
-            <button className="w-full px-4 py-2 text-sm active:bg-blue-800 bg-blue-600 text-white rounded-full">Place Order</button>
+            <Link to={'/fill_form'}>
+                <button className="w-full px-4 py-2 text-sm active:bg-blue-800 bg-blue-600 text-white rounded-full">Place Order</button>
+            </Link>
             <button className="w-full px-4 py-2 text-sm active:bg-green-800 bg-green-600 text-white rounded-full">Connect</button>
         </div>
     </>)

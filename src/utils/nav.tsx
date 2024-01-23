@@ -23,6 +23,11 @@ const Nav: React.FC = () => {
                     <span className="material-symbols-outlined py-2 text-gray-600"> info </span>
                 </button>
             </Link>
+            <Link to={'/fill_form'} className='w-full transform border-r px-4 py-2 duration-300 hover:bg-gray-300 text-center'>
+                <button type="button" className="">
+                    <span className="material-symbols-outlined py-2 text-gray-600"> forms_apps_script </span>
+                </button>
+            </Link>
         </div>
     </>)
 }
