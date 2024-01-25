@@ -1,6 +1,6 @@
 ```json
 {
-  "title": "Awesome Personal Website",
+  "title": "Awesome Personal Website...",
   "description": "🚀 Welcome to the repository for my incredible personal website!",
   "author": "itsshreyashk",
   "languages": ["Typescript", "Tailwind CSS", "Firebase"],
