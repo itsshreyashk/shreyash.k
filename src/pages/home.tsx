@@ -47,7 +47,7 @@ const Home: React.FC = () => {
 const Knit: React.FC = () => {
     return (<>
         <div className="max-w-full px-4 rounded-xl mb-4 py-20 bg-black px-4 mx-4">
-            <span className='text-5xl font-bold text-white' id='pro-2'>{">"}Hello. I'm Shreyash Kumar. I'm working towards in building <span className="text-blue-600">powerful servers</span> and <span className="text-green-600">elegant frontends.</span> You can view all information and place order anytime from <Link to={'/order'} className='text-green-300 hover:underline'>here.</Link></span>
+            <span className='text-5xl font-bold text-white' id='pro-2'>{">"}Hello. I'm Shreyash Kumar. I'm working towards in building <span className="text-blue-600">powerful servers</span> and <span className="text-green-600">DevOps.</span> You can view all information and place order anytime from <Link to={'/order'} className='text-green-300 hover:underline'>here.</Link></span>
         </div>
     </>)
 }
