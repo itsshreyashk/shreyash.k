@@ -19,7 +19,6 @@
     "start_app": "npm run dev"
   },
   "usage": "Feel free to fork and modify this template for your own personal website. Don't forget to give credit!",
-  "inspiration": "Inspired by the design principles of Elon Musk and the innovation of Sam Altman.",
   "contribute": "Contributions are welcome! Just fork the repo and submit a pull request.",
   "contact": {
     "email": "shreyashkumar.me@gmail.com",
