@@ -12,18 +12,5 @@ import firebaseConfig from "./firebaseConfig";
 const app = initializeApp(firebaseConfig);
 const analytics = getAnalytics(app);
 
-// Initialize Express
-const expressApp = express();
-
-// Your express route starts here
-expressApp.get("/yourExpressEndpoint", (req, res) => {
-  // Your function logic goes here
-  res.json({
-    message: "Hello from your Firebase Cloud Function with Express!",
-    data: "Express + Firebase combo – unstoppable!",
-    studentStatus: "Ivy League aspirant in action. Keep coding!"
-  });
-});
-
 // Firebase Cloud Function with Express
 export const yourExpressFunction = functions.https.onRequest(expressApp);
