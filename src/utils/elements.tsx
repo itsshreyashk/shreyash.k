@@ -55,7 +55,7 @@ const PlaceOrder: React.FC = () => {
 const TrackOrder: React.FC = () => {
     const [trackStatus] = useState([
         {
-            "title": "Go to the Google form.",
+            "title": "Click on Place Order Below.",
             "description": "Fill up the Google Forms to initiate process. See the Plans and choose accordingly."
         },
         {
@@ -74,7 +74,7 @@ const TrackOrder: React.FC = () => {
         },
         {
             "title": "Get your Product.",
-            "description": "Submit the form so that we can get what you want."
+            "description": "Your awaited product will be ready."
         }
     ]);
     const closeTrack = useRef<HTMLDivElement>(null);
@@ -90,7 +90,7 @@ const TrackOrder: React.FC = () => {
 
     return (
         <div id="removable" className="w-screen fixed bottom-0 pb-20 p-2 flex justify-center bg-[transparent] z-[5]" style={{ pointerEvents: 'none' }}>
-            <div id="resizable" className=" animation_01 px-4 max-w-[500px] resize-y py-2 rounded-2xl bg-[transparent] backdrop-blur-xl shadow-xl border border-gray-200 w-full h-[max-content] hidden" style={{ pointerEvents: 'auto' }}>
+            <div id="resizable" className=" animation_01 px-4 max-w-[500px] resize-y py-2 rounded-2xl bg-[transparent] backdrop-blur-xl shadow-xl w-full h-[max-content] hidden" style={{ pointerEvents: 'auto' }}>
                 <div className="w-full flex justify-end pb-2 space-x-1">
                     <div className="p-2 w-1 rounded-full bg-green-600 cursor-pointer" onClick={handleClose} ref={closeTrack}></div>
                     <div className="p-2 w-1 rounded-full bg-yellow-600 cursor-pointer" onClick={handleClose} ref={closeTrack}></div>
@@ -99,8 +99,8 @@ const TrackOrder: React.FC = () => {
                 </div>
                 <div className="w-full rounded-xl border border-gray-200 overflow-hidden">
                     {trackStatus.map((element: any, index: number) => (
-                        <div key={index} className="card cursor-pointer px-4 py-2 w-full bg-white border-b hover:bg-gray-200 transition duration-300">
-                            <span id="title" className="font-bold text-xl">{element.title}</span><br />
+                        <div key={index} className="card cursor-pointer px-4 py-2 w-full bg-white hover:bg-gray-200 transition duration-300">
+                            <span id="title" className="pro-2 font-bold text-xl">{element.title}</span><br />
                             <span id="infom" className="text-sm text-gray-600">{element.description}</span>
                         </div>
                     ))}
