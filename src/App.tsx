@@ -8,6 +8,7 @@ import { Intro, ShowInfo, Cookies } from './utils/elements';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Form from './pages/form';
 import Blogs from './pages/blogs';
+import Info from './pages/info';
 const App: React.FC = () => {
   const [showDelayedInfoX, setShowDelayedInfoX] = useState(false);
   const [showDelayedInfoY, setShowDelayedInfoY] = useState(false);
@@ -34,12 +35,13 @@ const App: React.FC = () => {
       <Cookies />
       {showDelayedInfoX && <ShowInfo inputValue="Explore awesome Blogs in the Blogs Tab." />}
       {showDelayedInfoY && <ShowInfo inputValue="Use Keyboard shortcuts to navigate faster within pages." />}
-      {showDelayedInfoZ && <ShowInfo inputValue="We Use WhatsApp for real-time communication." />}
+      {showDelayedInfoZ && <ShowInfo inputValue="We Use Slack for real-time communication." />}
       <BrowserRouter>
         <Routes>
           <Route path='/' element={<Home />}></Route>
           <Route path='/blogs' element={<Blogs />}></Route>
           <Route path='/order' element={<Order />}></Route>
+          <Route path='/info' element={<Info />}></Route>
           <Route path='/fill_form' element={<Form />}></Route>
         </Routes>
       </BrowserRouter>

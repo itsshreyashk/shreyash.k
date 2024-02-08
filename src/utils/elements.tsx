@@ -285,11 +285,11 @@ const TechStackTable: React.FC = () => {
                         </td>
                         <td className="px-6 py-4 whitespace-nowrap">
                             <div className="text-sm font-medium text-blue-500">
-                                Docker
+                                SocketIO
                             </div>
                         </td>
                         <td className="px-6 py-4 whitespace-nowrap">
-                            <div className="text-sm text-gray-800">Docker Provides easy containerization.</div>
+                            <div className="text-sm text-gray-800">Real-time bidirectional event-based communication.</div>
                         </td>
                     </tr>
                 </tbody>
@@ -305,7 +305,7 @@ const Pricing: React.FC = () => {
             <h1 id="pro-2" className="text-4xl">Pricing</h1>
             <PricingTable />
             <div className="py-2">
-                <span className="text-gray-500 text-sm">*Disclaimer : The pricing above does not include GST charges. The charges above are not negotiable. </span>
+                <span className="text-gray-500 text-sm">*Disclaimer : The pricing above does not include GST charges. The charges above are not negotiable. <span className="text-gray-800 fontb-bold">Charges are low because the launch is new. Contact for further information.</span></span>
             </div>
         </div>
     </>)
