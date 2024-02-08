@@ -22,7 +22,7 @@ const PlaceOrderButton: React.FC = () => {
 //Main code to display here...
 const Impress: React.FC = () => {
     return (<>
-        <div className="text-center px-4 py-[200px] bg-black border-b border-gray-300">
+        <div className="text-center px-4 py-[250px] bg-black border-b border-gray-300">
             <span className="font-bold text-7xl text-white text-anim" id="pro-2">
                 Order Websites Like never Before.
             </span>
@@ -36,7 +36,7 @@ const Impress: React.FC = () => {
         </div>
         <Pricing />
         <div className="pt-[500px] pb-[80px] text-center">
-            <span id="pro-3" className="text-7xl tracking-tight">Now or <span className="text-red-600">Never.</span> </span>
+            <span id="pro-3" className="text-7xl tracking-tight">Just do <span className="text-red-600">it.</span> </span>
         </div>
     </>);
 }
@@ -45,9 +45,9 @@ const PlaceOrder: React.FC = () => {
     return (<>
         <div className="w-full py-4 space-y-1">
             <Link to={'/fill_form'}>
-                <button className="w-full px-4 py-2 text-sm active:bg-blue-800 bg-blue-600 text-white rounded-full">Place Order</button>
+                <button className="w-full px-4 py-2 text-sm bg-blue-600 text-white rounded-full focus:outline-none focus:ring-2 focus:ring-blue-600 focus:ring-offset-2 hover:bg-blue-700 transition duration-300 ease-in-out">Place Order</button>
             </Link>
-            <button className="w-full px-4 py-2 text-sm active:bg-green-800 bg-green-600 text-white rounded-full">Connect</button>
+            <button className="w-full px-4 py-2 text-sm bg-green-600 text-white rounded-full focus:outline-none focus:ring-2 focus:ring-green-600 focus:ring-offset-2 hover:bg-green-700 transition duration-300 ease-in-out">Connect</button>
         </div>
     </>)
 }
@@ -90,14 +90,14 @@ const TrackOrder: React.FC = () => {
 
     return (
         <div id="removable" className="w-screen fixed bottom-0 pb-20 p-2 flex justify-center bg-[transparent] z-[5]" style={{ pointerEvents: 'none' }}>
-            <div id="resizable" className=" animation_01 px-4 max-w-[500px] resize-y py-2 rounded-2xl bg-[transparent] backdrop-blur-xl shadow-xl border border-gray-500 w-full h-[max-content] hidden" style={{ pointerEvents: 'auto' }}>
+            <div id="resizable" className=" animation_01 px-4 max-w-[500px] resize-y py-2 rounded-2xl bg-[transparent] backdrop-blur-xl shadow-xl border border-gray-200 w-full h-[max-content] hidden" style={{ pointerEvents: 'auto' }}>
                 <div className="w-full flex justify-end pb-2 space-x-1">
                     <div className="p-2 w-1 rounded-full bg-green-600 cursor-pointer" onClick={handleClose} ref={closeTrack}></div>
                     <div className="p-2 w-1 rounded-full bg-yellow-600 cursor-pointer" onClick={handleClose} ref={closeTrack}></div>
                     <div className="p-2 w-1 rounded-full bg-red-600 cursor-pointer" onClick={handleClose} ref={closeTrack}></div>
 
                 </div>
-                <div className="w-full rounded-xl border border-gray-700 overflow-hidden">
+                <div className="w-full rounded-xl border border-gray-200 overflow-hidden">
                     {trackStatus.map((element: any, index: number) => (
                         <div key={index} className="card cursor-pointer px-4 py-2 w-full bg-white border-b hover:bg-gray-200 transition duration-300">
                             <span id="title" className="font-bold text-xl">{element.title}</span><br />
@@ -361,7 +361,7 @@ const PricingTable: React.FC = () => {
                         </td>
                         <td className="px-6 py-4 whitespace-nowrap">
                             <div className="text-sm font-medium text-blue-500">
-                                $20 per day.
+                                $20 per hr.
                             </div>
                         </td>
                     </tr>
