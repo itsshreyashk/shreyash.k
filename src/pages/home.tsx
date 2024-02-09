@@ -59,6 +59,12 @@ const Projects: React.FC = () => {
             name: "Loudrooms-Actuator",
             description: "this.me",
             status: "public",
+        },
+        {
+            url: "https://github.com/itsshreyashk/shreyash.k",
+            name: "shreyash.k",
+            description: "Official WebApp.",
+            status: "public",
         }
     ]
     return (<>
