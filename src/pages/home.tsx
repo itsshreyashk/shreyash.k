@@ -57,7 +57,7 @@ const Projects: React.FC = () => {
         {
             url: "https://github.com/itsshreyashk/Loudrooms-Actuator",
             name: "Loudrooms-Actuator",
-            description: "this.me",
+            description: "Create and Join Chat rooms.",
             status: "public",
         },
         {
