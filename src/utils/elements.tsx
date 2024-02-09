@@ -1,21 +1,13 @@
-import React, { useRef, useState, useEffect } from "react";
+import React, { useRef, useEffect } from "react";
 import { Link } from "react-router-dom";
 // import { Link } from "react-router-dom";
 const PlaceOrderButton: React.FC = () => {
-
-    const handleOpen = () => {
-        const resizableDiv: any = document.getElementById('resizable');
-        const removable = document.getElementById('removable');
-        if (resizableDiv && removable) {
-            resizableDiv.style.display = 'block'; // or any other suitable value, like 'flex' or 'grid'
-            removable.style.display = 'flex'; // or any other suitable value, like 'flex' or 'grid'
-        }
-    };
-
     return (
-        <button type="button" className="px-3 py-1 bg-blue-500 rounded-full top-4 fixed right-4 text-white text-sm hover:bg-blue-600" onClick={handleOpen}>
-            Place Order
-        </button>
+        <Link to={"/fill_form"}>
+            <button type="button" className="px-3 py-1 bg-blue-500 rounded-full top-4 fixed right-4 text-white text-sm hover:bg-blue-600">
+                Place Order
+            </button>
+        </Link>
     );
 }
 
@@ -41,75 +33,7 @@ const Impress: React.FC = () => {
     </>);
 }
 
-const PlaceOrder: React.FC = () => {
-    return (<>
-        <div className="w-full py-4 space-y-1">
-            <Link to={'/fill_form'}>
-                <button className="w-full px-4 py-2 text-sm bg-blue-600 text-white rounded-full focus:outline-none focus:ring-2 focus:ring-blue-600 focus:ring-offset-2 hover:bg-blue-700 transition duration-300 ease-in-out">Place Order</button>
-            </Link>
-            <button className="w-full px-4 py-2 text-sm bg-green-600 text-white rounded-full focus:outline-none focus:ring-2 focus:ring-green-600 focus:ring-offset-2 hover:bg-green-700 transition duration-300 ease-in-out">Connect</button>
-        </div>
-    </>)
-}
 
-const TrackOrder: React.FC = () => {
-    const [trackStatus] = useState([
-        {
-            "title": "Click on Place Order Below.",
-            "description": "Fill up the Google Forms to initiate process. See the Plans and choose accordingly."
-        },
-        {
-            "title": "Submit the Form.",
-            "description": "Submit the form so that we can get what you want."
-        },
-        {
-            "title": "Wait for confirmation.",
-            "description": "Once your order has been confirmed, you move on."
-
-        },
-        {
-            "title": "Oversee Development.",
-            "description": "Get to see the progress of your purchase in real-time so that it touches where you want it to be."
-
-        },
-        {
-            "title": "Get your Product.",
-            "description": "Your awaited product will be ready."
-        }
-    ]);
-    const closeTrack = useRef<HTMLDivElement>(null);
-
-    const handleClose = () => {
-        const resizableDiv = document.getElementById('resizable');
-        const removable = document.getElementById('removable');
-        if (resizableDiv && removable) {
-            resizableDiv.style.display = 'none';
-            removable.style.display = 'none';
-        }
-    };
-
-    return (
-        <div id="removable" className="w-screen fixed bottom-0 pb-20 p-2 flex justify-center bg-[transparent] z-[5]" style={{ pointerEvents: 'none' }}>
-            <div id="resizable" className=" animation_01 px-4 max-w-[500px] resize-y py-2 rounded-2xl bg-[transparent] backdrop-blur-xl shadow-xl w-full h-[max-content] hidden" style={{ pointerEvents: 'auto' }}>
-                <div className="w-full flex justify-end pb-2 space-x-1">
-                    <div className="p-2 w-1 rounded-full bg-green-600 cursor-pointer" onClick={handleClose} ref={closeTrack}></div>
-                    <div className="p-2 w-1 rounded-full bg-yellow-600 cursor-pointer" onClick={handleClose} ref={closeTrack}></div>
-                    <div className="p-2 w-1 rounded-full bg-red-600 cursor-pointer" onClick={handleClose} ref={closeTrack}></div>
-
-                </div>
-                <div className="w-full rounded-xl border border-gray-200 overflow-hidden">
-                    {trackStatus.map((element: any, index: number) => (
-                        <div key={index} className="card cursor-pointer px-4 py-2 w-full bg-white hover:bg-gray-200 transition duration-300">
-                            <span id="title" className="pro-2 font-bold text-xl">{element.title}</span><br />
-                            <span id="infom" className="text-sm text-gray-600">{element.description}</span>
-                        </div>
-                    ))}
-                </div>
-                <PlaceOrder /> {/* Using the PlaceOrder component here */}
-            </div>
-        </div>
-    );
-}
 const Intro: React.FC = () => {
     const makeInit = useRef<HTMLDivElement>(null);
 
@@ -403,4 +327,4 @@ const Cookies: React.FC = () => {
     );
 };
 
-export { PlaceOrderButton, Impress, TrackOrder, Intro, ShowInfo, Cookies };
+export { PlaceOrderButton, Impress, Intro, ShowInfo, Cookies };
