@@ -65,6 +65,12 @@ const Projects: React.FC = () => {
             name: "shreyash.k",
             description: "Official WebApp.",
             status: "public",
+        },
+        {
+            url: "https://github.com/itsshreyashk/connectx",
+            name: "connectx",
+            description: "Connect to random people.",
+            status: "public",
         }
     ]
     return (<>
