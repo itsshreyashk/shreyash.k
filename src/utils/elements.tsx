@@ -22,6 +22,12 @@ const Impress: React.FC = () => {
         <div className="bg-white text-center py-[500px]">
             <span className="text-black text-5xl" id="pro-2">Get your website with a speedy, scalable and secure tech encoding with every bit made of unravelling experience.</span>
         </div>
+        <div className="text-center py-[500px] space-y-[20px]">
+            <span className="text-black text-5xl" id="pro-2">But, why me?</span><br />
+            <div className="py-20">
+                <span className="text-black text-4xl" id="pro-2">Because every <span className="text-green-500">product</span> that I make is not <span className="text-red-500">bounded</span> to present, it is rather set for immense heights with unwavering power to <div className="text-purple-500">scale</div>.</span>
+            </div>
+        </div>
         <div className="px-2 py-8 text-center border-t">
             <span id="pro-2" className="text-3xl">Stack that defines.</span>
             <TechStackTable />
