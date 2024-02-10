@@ -285,7 +285,7 @@ const PricingTable: React.FC = () => {
                         </td>
                         <td className="px-6 py-4 whitespace-nowrap">
                             <div className="text-sm font-medium text-blue-500">
-                                $20 per hr.
+                                $35 per hr.
                             </div>
                         </td>
                     </tr>
