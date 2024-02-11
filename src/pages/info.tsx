@@ -38,7 +38,7 @@ const Info: React.FC = () => {
                         mainFAQs && mainFAQs.map((element, index) => (
                             <div className="space-y-1 hover:scale-70 transform" key={index}>
                                 <span className="font-bold pro-1 text-sm text-gray-200">{element.question}</span><br />
-                                <span className='text-gray-700 text-sm text-gray-100'>{element.answer}</span><br />
+                                <span className='text-gray-700 text-sm text-white'>{element.answer}</span><br />
                             </div>
                         ))
                     }
