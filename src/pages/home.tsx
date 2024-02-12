@@ -67,8 +67,8 @@ const Projects: React.FC = () => {
             status: "public",
         },
         {
-            url: "https://github.com/itsshreyashk/connectx",
-            name: "connectx",
+            url: "https://github.com/itsshreyashk/ConnectSturd",
+            name: "ConnectSturd",
             description: "Connect to random people.",
             status: "public",
         }
