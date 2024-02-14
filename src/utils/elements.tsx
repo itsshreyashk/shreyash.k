@@ -109,11 +109,11 @@ const TechStackTable: React.FC = () => {
                         </td>
                         <td className="px-6 py-4 whitespace-nowrap">
                             <div className="text-sm font-medium text-blue-500">
-                                React
+                                React / Next
                             </div>
                         </td>
                         <td className="px-6 py-4 whitespace-nowrap">
-                            <div className="text-sm text-gray-800">React is a popular framework for current day trendy web applications.</div>
+                            <div className="text-sm text-gray-800">React is a JavaScript library for UI development, and Next.js extends its functionality with features such as server-side rendering and automatic code splitting.</div>
                         </td>
                     </tr>
                     {/* Add more rows for additional technologies */}
