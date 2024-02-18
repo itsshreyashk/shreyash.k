@@ -28,10 +28,10 @@ const Info: React.FC = () => {
 
 
     return (<>
-        <div className="w-full p-4">
+        <div className="w-screen h-screen bg-black opacity-85 p-4">
             <div className="flex justify-center">
 
-                <div className="px-4 py-2 space-y-4 text-center w-full max-w-[700px] overflow-y-auto rounded-xl border max-h-[80vh] h-[max-content] bg-gray-800">
+                <div className="px-4 py-2 space-y-4 text-center w-full max-w-[700px] overflow-y-auto rounded-xl bg-black opacity-85">
 
                     {
 
