@@ -25,12 +25,14 @@ const Home: React.FC = () => {
     }, [])
 
     return (<>
-        <div className="p-10 text-center">
+        <div className="p-10 text-center bg-black">
             <h1 className='text-6xl bg-gradient-to-r from-blue-100 via-blue-800 to-red-500 text-transparent bg-clip-text' id='pro-2'>{greeting},</h1>
         </div>
-        <Knit />
-        <div className="p-4 border mx-2 rounded-xl">
-            <h1 className='tetx-3xl' id="pro-2">Explore Projects in Github</h1>
+        <div className="bg-black">
+            <Knit />
+        </div>
+        <div className="p-4 mx-2 rounded-xl bg-black">
+            <h1 className='tetx-3xl text-white' id="pro-2">Explore Projects in Github</h1>
             <Projects />
         </div>
         <div className="py-20 flex justify-center">

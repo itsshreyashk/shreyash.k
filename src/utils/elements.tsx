@@ -22,13 +22,15 @@ const Impress: React.FC = () => {
         <div className="bg-white text-center py-[500px]">
             <span className="text-black text-5xl" id="pro-2">Get your website with a speedy, scalable and secure tech encoding with every bit made of unravelling experience.</span>
         </div>
-        <div className="px-2 py-8 text-center border-t">
+        <div className="px-2 py-8 text-center border-t bg-white">
             <span id="pro-2" className="text-3xl">Stack that defines.</span>
             <TechStackTable />
         </div>
-        <Pricing />
+        <div className="bg-white">
+            <Pricing />
+        </div>
         <div className="pt-[500px] pb-[80px] text-center">
-            <span id="pro-3" className="text-7xl tracking-tight">Just do <span className="text-red-600">it.</span> </span>
+            <span id="pro-3" className="text-7xl tracking-tight text-white">Just do <span className="text-red-600">it.</span> </span>
         </div>
     </>);
 }
@@ -229,7 +231,7 @@ const Pricing: React.FC = () => {
             <h1 id="pro-2" className="text-4xl">Pricing</h1>
             <PricingTable />
             <div className="py-2">
-                <span className="text-gray-500 text-sm">*Disclaimer : The pricing above does not include GST charges. The charges above are not negotiable. <span className="text-gray-800 fontb-bold">Charges are low because the launch is new. Contact for further information.</span></span>
+                <span className="text-gray-400 text-sm">*Disclaimer : The pricing above does not include GST charges. The charges above are not negotiable. <span className="text-gray-300 fontb-bold">Charges are low because the launch is new. Contact for further information.</span></span>
             </div>
         </div>
     </>)
