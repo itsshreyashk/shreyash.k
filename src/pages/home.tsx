@@ -25,7 +25,7 @@ const Home: React.FC = () => {
     }, [])
 
     return (<>
-        <div className="p-10 text-center bg-black">
+        <div className="p-10 text-center bg-black pt-20">
             <h1 className='text-6xl bg-gradient-to-r from-blue-100 via-blue-800 to-red-500 text-transparent bg-clip-text' id='pro-2'>{greeting},</h1>
         </div>
         <div className="bg-black">
