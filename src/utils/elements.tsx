@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 const PlaceOrderButton: React.FC = () => {
     return (
         <Link to={"/fill_form"}>
-            <button type="button" className="px-3 py-1 bg-blue-500 rounded-full top-4 fixed right-4 text-white text-sm hover:bg-blue-600">
+            <button type="button" className="px-3 py-1 bg-blue-500 rounded-full bottom-4 fixed right-4 text-white text-sm hover:bg-blue-600">
                 Place Order
             </button>
         </Link>
